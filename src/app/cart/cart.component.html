@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap gap-3">
+  @for (item of basket; track $index) {
+  <div class="card" style="width: 18rem">
+    <img [src]="item.product.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.product.name }}</h5>
+      <p class="card-text">{{ item.product.price }} $</p>
+      <a class="btn btn-danger" (click)="removeProduct(item.product.id)"
+        >Remove</a
+      >
+    </div>
+  </div>
+  }
+</div>

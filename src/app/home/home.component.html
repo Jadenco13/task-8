@@ -1,0 +1,12 @@
+<div class="w-100 d-flex justify-content-center align-items-center flex-wrap gap-3">
+  @for (item of allProductsArr; track $index) {
+  <div class="card" style="width: 18rem">
+    <img [src]="item.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">{{ item.price }} $</p>
+      <a class="btn btn-primary" (click)="addInBasketProduct(item)" >Add To Cart</a>
+    </div>
+  </div>
+  }
+</div>
